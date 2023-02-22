@@ -11,6 +11,7 @@ body {
     width: 100%;
     background-color: #F8F3EB;
     position: absolute;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 .header-bar {
@@ -81,18 +82,22 @@ button {
     min-width: 80px;
     margin: 5px;
     border-radius: 5px;
-    border: solid black 1px;
     background-color: #F8F3EB;
     color: #201315;
     font-weight: bolder;
+    border: none;
 }
 
 button:hover {
     background-color: #779eb2;
 }
 
-#ac-button:hover, #c-button:hover {
+#ac-button:hover {
     background-color: #E76D57;
+}
+
+#sign-button:hover {
+    background-color: #DA70D6;
 }
 
 #percent-button:hover, #divide-button:hover, #plus-button:hover, 

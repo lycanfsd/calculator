@@ -1,46 +1,36 @@
 function add() {
     const numbers = [...arguments];
-    let sum = numbers.reduce((total, arguments) => total + arguments);
-    return sum;
+    return numbers.reduce((total, arguments) => total + arguments);
 }
 
 function subtract() {
     const numbers = [...arguments];
-    let difference = numbers.reduce((total, arguments) => total - arguments);
-    return difference;
+    return numbers.reduce((total, arguments) => total - arguments);
 }
 
 function multiply() {
     const numbers = [...arguments];
-    let product = numbers.reduce((total, arguments) => total * arguments);
-    return product;
+    return numbers.reduce((total, arguments) => total * arguments);
+
 }
 
 function divide() {
     const numbers = [...arguments];
-    let quotient = numbers.reduce((total, arguments) => total / arguments);
-    return quotient;
+    return numbers.reduce((total, arguments) => total / arguments);
 }
 
-//takes an operator and 2 numbers and then calls one of the above functions on the numbers
-function operate(operator, num1, num2) {
+//takes an operator and array of numbers and then calls one of the above functions on the numbers
+function operate(operator, numArray) {
     switch (operator) {
         case '+':
-            add(num1, num2);
-            break;
+            return add(...numArray);
         case '-':
-            subtract(num1, num2);
-            break;
+            return subtract(...numArray);
         case '*':
-            multiply(num1, num2);
-            break;
+            return multiply(...numArray);
         case '/':
-            divide(num1, num2);
-            break;
+            return divide(...numArray);
     }
 }
 
-console.log(add(2, 2, 2, 10, 2)); //18
-console.log(subtract(2, 2, 2, 10, -2)); //-10
-console.log(multiply(2, 10, 5)); //100
-console.log(divide(2, 10, 5)); //0.04
+//functions that populate the display
