@@ -9,32 +9,37 @@
     <title>Calculator</title>
 </head>
 <body>
+    <div class="header-bar">
+        <h2>Online Calculator Tool</h2>
+    </div>
    <div class="calcContainer">
-        <div id="display"></div>
+        <div id="display">
+            <p id="display-text">0</p>
+        </div>
         <div class="buttons">
             <div class="row1">
                 <button id="ac-button">AC</button>
                 <button id="c-button">C</button>
-                <button>%</button>
-                <button>÷</button>
+                <button id="percent-button">%</button>
+                <button id="divide-button">÷</button>
             </div>
             <div class="row2">
                 <button>7</button>
                 <button>8</button>
                 <button>9</button>
-                <button>+</button>
+                <button id="plus-button">+</button>
             </div>
             <div class="row3">
                 <button>4</button>
                 <button>5</button>
                 <button>6</button>
-                <button>-</button>
+                <button id="minus-button">-</button>
             </div>
             <div class="row4">
                 <button>1</button>
                 <button>2</button>
                 <button>3</button>
-                <button>x</button>
+                <button id="multiply-button">x</button>
             </div>
             <div class="row5">
                 <button>0</button>
@@ -42,6 +47,9 @@
                 <button id="equalsButton">=</button>
             </div>
         </div>
+   </div>
+   <div class="footer-bar">
+        <p>Copyright © LYCANFSD</p>
    </div>
 </body>
 </html>
