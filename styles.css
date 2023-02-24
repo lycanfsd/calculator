@@ -47,6 +47,7 @@ body {
 
 #display {
     display: flex;
+    flex-direction: column;
     justify-content: right;
     align-items: flex-end;
     border: solid black 1px;
@@ -61,6 +62,12 @@ body {
 #display-text {
     font-size: xxx-large;
     margin: 10px 10px;
+    color: #201315;
+}
+
+#storedDisplayText {
+    font-size: x-large;
+    margin: 10px 10px 25px;
     color: #201315;
 }
 
