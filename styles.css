@@ -4,7 +4,8 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0px auto;
-    padding: 0px;
+    padding-top: 0;
+    padding-bottom: 7rem;
     min-height: 100vh;
     min-width: 100vh;
     height: 100%;
@@ -42,7 +43,7 @@ body {
     border: solid black 1px;
     border-radius: 10px;
     box-shadow: black 2px 5px 10px;
-    margin: 100px;
+    margin: 20px;
 }
 
 #display {
@@ -63,6 +64,7 @@ body {
     font-size: xxx-large;
     margin: 10px 10px;
     color: #201315;
+    overflow-wrap: normal;
 }
 
 #storedDisplayText {
@@ -97,6 +99,7 @@ button {
 
 button:hover {
     background-color: #779eb2;
+    border: solid #201315 2px;
 }
 
 #ac-button:hover {
@@ -121,6 +124,15 @@ button:hover {
 
 #equalsButton:hover {
     background-color: #B5E5CF;
+}
+
+.key {
+    height: 10rem;
+    width: 20rem;
+}
+
+li {
+    padding-bottom: 5px;
 }
 
 .footer-bar {

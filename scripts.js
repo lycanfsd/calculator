@@ -13,6 +13,7 @@ let previousValue = '';
 let currentValue = '';
 
 buttons.forEach(button => {button.addEventListener('click', () => processButton(button))});
+window.addEventListener('keydown', (e) => processKeyDown(e));
 
 function operate(operator, previousValue, currentValue) {
     previousValue = Number(previousValue);
@@ -50,7 +51,7 @@ function processButton(button) {
             storedDisplayCalc.textContent = `${previousValue} ${operator}`;
             displayCalc.textContent = currentValue;
         } else if (button.classList.contains('number')) {
-            currentValue += button.textContent;
+            processNum(button.textContent);
             displayCalc.textContent = currentValue;
         } else if (button.classList.contains('clear')) {
             clearCalc();
@@ -70,6 +71,10 @@ function processButton(button) {
             displayCalc.textContent = currentValue;
         }
     }
+}
+
+function processNum(number) {
+    currentValue += number;
 }
 
 function processOperator(op) {
@@ -94,4 +99,46 @@ function clearCalc() {
 
 function roundNum(number) {
     return Math.round(number * 1000) / 1000;
+}
+
+function processKeyDown(e) {
+    if (e.key == '0') {
+        processButton(buttons[16]);
+    } else if (e.key == '1') {
+        processButton(buttons[12]);
+    } else if (e.key == '2') {
+        processButton(buttons[13]);
+    } else if (e.key == '3') {
+        processButton(buttons[14]);
+    } else if (e.key == '4') {
+        processButton(buttons[8]);
+    } else if (e.key == '5') {
+        processButton(buttons[9]);
+    } else if (e.key == '6') {
+        processButton(buttons[10]);
+    } else if (e.key == '7') {
+        processButton(buttons[4]);
+    } else if (e.key == '8') {
+        processButton(buttons[5]);
+    } else if (e.key == '9') {
+        processButton(buttons[6]);
+    } else if (e.key == 'Backspace') {
+        processButton(buttons[0]);
+    } else if (e.key == '%') {
+        processButton(buttons[2]);
+    } else if (e.key == '/') {
+        processButton(buttons[3]);
+    } else if (e.key == '*') {
+        processButton(buttons[7]);
+    } else if (e.key == '-') {
+        processButton(buttons[11]);
+    } else if (e.key == '+') {
+        processButton(buttons[15]);
+    } else if (e.key == 'Enter') {
+        processButton(buttons[18]);
+    } else if (e.key == ".") {
+        processButton(buttons[17]);
+    } else if (e.key == 's') {
+        processButton(buttons[1]);
+    }
 }
